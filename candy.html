@@ -26,7 +26,7 @@
     </fieldset>
   </form>
   <button onclick="selectBox()">Select a box</button>
-  <div id="results"></div>
+  <div id="result"></div>
   <script>
     let my_candy_box = {};
 
@@ -35,7 +35,7 @@
       my_candy_box.dark = document.getElementById("dark-chocolate").checked;
       my_candy_box.nuts = document.getElementById("nuts").checked;
       my_candy_box.chewy = document.getElementById("chewy").checked;
-      document.getElementById("results").innerHTML = JSON.stringify(my_candy_box1);
+      document.getElementById("results").innerHTML = JSON.stringify(my_candy_box);
     }
   </script>
   
@@ -45,14 +45,14 @@
               my_candy_box.dark = document.getElementById("dark").checked;
               my_candy_box.nuts = document.getElementById("nuts").checked;
               my_candy_box.chewy = document.getElementById("chewy").checked;
-              document.getElementById("result").innerHTML = JSON.stringify(my_candy_box1);
+              document.getElementById("result").innerHTML = JSON.stringify(my_candy_box);
           }
   
           function updateBox() {
               let size = document.getElementById("size").value;
               let price = document.getElementById("price").value;
               my_candy_box[size] = price;
-              document.getElementById("result").innerHTML = JSON.stringify(my_candy_box1);
+              document.getElementById("result").innerHTML = JSON.stringify(my_candy_box);
           }
       </script>
       <form>
